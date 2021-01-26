@@ -1,34 +1,49 @@
-<div fxLayout="row" fxLayoutAlign="center center" >
-    <div fxLayout="column" fxLayoutAlign="space-around center" fxFlex=30% fxFlex.xs=100% >
-
-        <div fxFlexAlign="end" >ujjwal</div>
-        <div fxFlexAlign="end">ujjwal</div>
+<div fxLayout="row" fxLayoutAlign="center center" [ngClass]="{'fullHeight': true}" >
+    <div fxLayout="column" fxLayoutAlign="space-around center" fxFlex=30% fxFlex.xs=100%  >
         <table style="width:100%">
+            <tr [ngClass]="{'blank_row': true}">
+                <th colspan="4">
+                    <span >
+                        <div [ngClass]="{'margin_right_result': true}" >
+                            {{equation}}
+                        </div>
+                    </span>
+                    </th>
+            </tr>
+            <tr [ngClass]="{'blank_row': true}">
+                <th colspan="4">
+                    <span >
+                        <div [ngClass]="{'margin_right_result': true}" >
+                            {{result}}
+                        </div>
+                    </span>
+                    </th>
+            </tr>
             <tr>
             <th>
                 <span >
-                    <button color="primary" mat-fab  aria-label="Example icon button with a delete icon">
+                    <button color="primary" mat-fab  aria-label="Example icon button with a delete icon" (click)="insertValue('7')">
                         7
                     </button>
                 </span>
             </th>
             <th>
                 <span >
-                    <button color="primary" mat-fab  aria-label="Example icon button with a delete icon">
+                    <button color="primary" mat-fab  aria-label="Example icon button with a delete icon" (click)="insertValue('8')">
                         8
                     </button>
                 </span>
             </th>
             <th>
                 <span >
-                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="insertValue('9')">
                         9
                     </button>
                 </span>
             </th>
             <th>
                 <span >
-                    <button mat-fab  aria-label="Example icon button with a delete icon">
+                    <button mat-fab  aria-label="Example icon button with a delete icon" (click)="insertOperator('/')">
                         /
                     </button>
                 </span>
@@ -37,29 +52,29 @@
             <tr>
                 <th>
                 <span >
-                    <button mat-fab color="primary"  aria-label="Example icon button with a delete icon">
+                    <button mat-fab color="primary"  aria-label="Example icon button with a delete icon" (click)="insertValue('4')">
                         4
                         </button>
                 </span>
                 </th>
                 <th>
                 <span >
-                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="insertValue('5')">
                         5
                         </button>
                 </span>
                 </th>
                 <th>
                 <span >
-                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="insertValue('6')">
                         6
                         </button>
                 </span>
                 </th>
                 <th>
                 <span >
-                    <button mat-fab  aria-label="Example icon button with a delete icon">
-                        *
+                    <button mat-fab  aria-label="Example icon button with a delete icon" (click)="insertOperator('*')">
+                        X
                         </button>
                 </span>
                 </th>
@@ -67,28 +82,28 @@
             <tr>
                 <th>
                 <span >
-                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="insertValue('1')">
                         1
                         </button>
                 </span>
                 </th>
                 <th>
                 <span >
-                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="insertValue('2')">
                         2
                         </button>
                 </span>
                 </th>
                 <th>
                 <span >
-                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="insertValue('3')">
                         3
                         </button>
                 </span>
                 </th>
                 <th>
                 <span >
-                    <button mat-fab  aria-label="Example icon button with a delete icon">
+                    <button mat-fab  aria-label="Example icon button with a delete icon" (click)="insertOperator('-')">
                         -
                         </button>
                 </span>
@@ -98,21 +113,21 @@
             <tr>
                 <th colspan="2">
                 <span >
-                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="insertValue('0')">
                         0
                         </button>
                 </span>
                 </th>
                 <th>
                 <span >
-                    <button mat-fab  aria-label="Example icon button with a delete icon">
+                    <button mat-fab  aria-label="Example icon button with a delete icon" (click)="cancelOperator()">
                         c
                         </button>
                 </span>
                 </th>
                 <th>
                 <span >
-                    <button mat-fab  aria-label="Example icon button with a delete icon">
+                    <button mat-fab  aria-label="Example icon button with a delete icon" (click)="insertOperator('+')">
                         +
                         </button>
                 </span>
