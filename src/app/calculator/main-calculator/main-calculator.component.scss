@@ -10,5 +10,26 @@
 .margin_right_result{
     margin-right: 35px;
 }
+.arrow_blue{
+    width: 82%;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 10px solid #236B8E;
+    border-bottom: 15px solid transparent;
+}
+.box_blue{
+    height: 0;
+    border-top: 15px solid #236B8E;
+    border-right: 35px solid #236B8E;
+    border-bottom: 15px solid #236B8E;
+    position: relative;
+}
+
+.align_cross{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    color: #fff;
+}
 
 

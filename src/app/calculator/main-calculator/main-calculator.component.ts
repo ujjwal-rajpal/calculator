@@ -17,6 +17,11 @@ export class MainCalculatorComponent implements OnInit {
    * @param value 
    */
   insertValue(value){
+    if(value === '='){
+      this.equation =  this.result.toString();
+      this.result= null;
+      return;
+    }
     this.equation = this.equation+value;
     let res = eval(this.equation);
     if(res != this.equation){
@@ -37,5 +42,15 @@ export class MainCalculatorComponent implements OnInit {
   cancelOperator(){
     this.equation = '';
     this.result = null;
+  }
+
+  deleteLastChar(){
+    if(this.equation == ''){
+      return
+    }
+    this.equation = this.equation.slice(0,-1);
+    
+    
+    
   }
 }
